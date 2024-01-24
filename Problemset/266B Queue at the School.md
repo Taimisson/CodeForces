@@ -27,6 +27,6 @@ int main(){
                 j++;
             }
 
-    cout << s << endl;
+    cout << s << "\n";
 }
 ```
