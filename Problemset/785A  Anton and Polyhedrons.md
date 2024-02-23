@@ -7,26 +7,31 @@ https://codeforces.com/problemset/problem/785/A
 ```
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
     
-    int n;
+    map<string, int> faces = {
+        {"Tetrahedron", 4},
+        {"Cube", 6},
+        {"Octahedron", 8},
+        {"Dodecahedron", 12},
+        {"Icosahedron", 20}
+    };
+
+    int n, contador = 0;
     cin >> n;
-    int contador = 0;
+
     for(int i = 0; i < n; ++i){
         string s;
         cin >> s;
-        if(s == "Tetrahedron") contador += 4;
-        else if(s == "Cube") contador += 6;
-        else if(s == "Octahedron") contador += 8;
-        else if(s == "Dodecahedron") contador += 12;
-        else if(s == "Icosahedron") contador += 20;
+        contador += faces[s];
     }
- 
+
     cout << contador << endl;
     return 0;
 }
+
 ```
